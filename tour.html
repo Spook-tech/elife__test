@@ -4,12 +4,12 @@
     <title>Заголовок</title>
     <meta charset="UTF-8"/>
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230307190745"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230307191716"/>
     <link rel="shortcut icon" href="favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230307190745" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230307191716" rel="stylesheet"/>
   </head>
   <body> 
     <div class="wrapper">
@@ -95,16 +95,16 @@
                         <div class="tour__info__item-icon"><picture><source srcset="img/icons/download.webp" type="image/webp"><img src="img/icons/download.png" alt=""/></picture></div>
                         <div class="tour__info__item-text">Скачать программу</div></a></li>
                     <li class="tour__info__item to-favorites like-button">
-                      <button class="tour__info__item">
+                      <div class="tour__info__item">
                         <div class="tour__info__item-icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path fill="transparent" stroke-width="20px" stroke="#d7443e" d="M449.28 121.43a115.2 115.2 0 0 0-137.89-35.75c-21.18 9.14-40.07 24.55-55.39 45-15.32-20.5-34.21-35.91-55.39-45a115.2 115.2 0 0 0-137.89 35.75c-16.5 21.62-25.22 48.64-25.22 78.13 0 42.44 25.31 89 75.22 138.44 40.67 40.27 88.73 73.25 113.75 89.32a54.78 54.78 0 0 0 59.06 0c25-16.07 73.08-49.05 113.75-89.32 49.91-49.42 75.22-96 75.22-138.44 0-29.49-8.72-56.51-25.22-78.13z" data-original="#f9595f"></path>
                             </g>
                           </svg>
                         </div>
                         <div class="tour__info__item-text">В избранное </div>
-                      </button>
+                      </div>
                     </li>
                   </ul>
                 </div>
@@ -160,7 +160,7 @@
                       <div class="tour__sidebar__share-text">Поделиться</div></a>
                     <div class="tour__sidebar__favourites">
                       <div class="tour__sidebar__favourites-icon like-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="42" height="40" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="40" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                           <g>
                             <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                           </g>
@@ -243,21 +243,21 @@
                     </div>
                   </div>
                   <div class="tour__sidebar__sgl-mobile">
-                    <div class="custom-radio">
+                    <form class="custom-radio" action="URL">
                       <input class="custom-radio__input" type="checkbox" id="sql-mobile"/>
                       <label class="decor" for="sql-mobile"></label>
                       <label class="custom-radio__label" for="sql-mobile">Размещение SGL + 255 €</label>
-                    </div>
+                    </form>
                   </div>
                 </div>
                 <div class="tour__sidebar__bottom">
                   <div class="tour__sidebar__price">50000 € /чел.</div>
                   <div class="tour__sidebar__sgl">
-                    <div class="custom-radio">
+                    <form class="custom-radio" action="URL">
                       <input class="custom-radio__input" type="checkbox" id="sql"/>
                       <label class="decor" for="sql"></label>
                       <label class="custom-radio__label" for="sql">Размещение SGL + 255 €</label>
-                    </div>
+                    </form>
                   </div>
                   <div class="tour__sidebar__buttons"> <a class="tour__sidebar__button button-box" href="#">Заказать</a><a class="tour__sidebar__button button-box" href="#">Получить консультацию</a></div>
                 </div>
@@ -727,7 +727,7 @@
                       <div class="tour-item__from-to tour-item-box">Каспи-Метрополь</div>
                       <div class="tour-item__buttons"> 
                         <button class="tour-item__buttons-like like-button tour-item__button">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                             </g>
@@ -768,7 +768,7 @@
                       <div class="tour-item__from-to tour-item-box">Каспи-Метрополь</div>
                       <div class="tour-item__buttons"> 
                         <button class="tour-item__buttons-like like-button tour-item__button">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                             </g>
@@ -809,7 +809,7 @@
                       <div class="tour-item__from-to tour-item-box">Каспи-Метрополь</div>
                       <div class="tour-item__buttons"> 
                         <button class="tour-item__buttons-like like-button tour-item__button">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                             </g>
@@ -859,7 +859,7 @@
                       <div class="tour-item__from-to tour-item-box">Каспи-Метрополь</div>
                       <div class="tour-item__buttons"> 
                         <button class="tour-item__buttons-like like-button tour-item__button">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                             </g>
@@ -900,7 +900,7 @@
                       <div class="tour-item__from-to tour-item-box">Каспи-Метрополь</div>
                       <div class="tour-item__buttons"> 
                         <button class="tour-item__buttons-like like-button tour-item__button">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                             </g>
@@ -941,7 +941,7 @@
                       <div class="tour-item__from-to tour-item-box">Каспи-Метрополь</div>
                       <div class="tour-item__buttons"> 
                         <button class="tour-item__buttons-like like-button tour-item__button">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                             </g>
@@ -982,7 +982,7 @@
                       <div class="tour-item__from-to tour-item-box">Каспи-Метрополь</div>
                       <div class="tour-item__buttons"> 
                         <button class="tour-item__buttons-like like-button tour-item__button">
-                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="542" height="512" x="0" y="0" viewBox="0 0 390.837 391.837" style="enable-background:new 0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M285.257 35.528c58.743.286 106.294 47.836 106.58 106.58 0 107.624-195.918 214.204-195.918 214.204S0 248.165 0 142.108c0-58.862 47.717-106.58 106.58-106.58a105.534 105.534 0 0 1 89.339 48.065 106.578 106.578 0 0 1 89.338-48.065z" stroke-width="20px" stroke="#d7443e" fill="transparent" data-original="#d7443e"></path>
                             </g>
@@ -1098,8 +1098,8 @@
         </div>
       </div>
     </div>
-    <script src="js/swiper.js?_v=20230307190745"></script>
-    <script src="js/spollers.js?_v=20230307190745"></script>
-    <script src="js/app.js?_v=20230307190745"></script>
+    <script src="js/swiper.js?_v=20230307191716"></script>
+    <script src="js/spollers.js?_v=20230307191716"></script>
+    <script src="js/app.js?_v=20230307191716"></script>
   </body>
 </html>
