@@ -6,6 +6,9 @@ document.body.addEventListener('click', (e) => {
   if (target.classList.contains('like-button') || target.closest('.like-button')){
     target.closest('.like-button').classList.toggle('add');
   }
+  if (target.classList.contains('tour__tags__button')){
+    document.querySelector('.tour__tags').classList.toggle('active');
+  }
 })
 
 const reviewsSwiper = new Swiper('.reviews__swiper', {

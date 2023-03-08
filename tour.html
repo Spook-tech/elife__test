@@ -4,12 +4,12 @@
     <title>Заголовок</title>
     <meta charset="UTF-8"/>
     <meta name="format-detection" content="telephone=no"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230307191716"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230308082048"/>
     <link rel="shortcut icon" href="favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230307191716" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230308082048" rel="stylesheet"/>
   </head>
   <body> 
     <div class="wrapper">
@@ -59,6 +59,15 @@
         </div>
       </header>
       <main>
+        <section class="breadcrumb">
+          <div class="breadcrumb__container">
+            <ul class="breadcrumb__list">
+              <li><a href="index.html">Главная</a></li>
+              <li> <a href="#">Организованные туры</a></li>
+              <li> <a href="#">Великобритания</a></li>
+            </ul>
+          </div>
+        </section>
         <aside class="socials"> 
           <ul class="socials__list"> 
             <li class="socials-facebook"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></li>
@@ -136,6 +145,7 @@
                   <li class="tour__tags-item tags-item"> <a href="#"> Пляж</a></li>
                   <li class="tour__tags-item tags-item"> <a href="#"> Горы</a></li>
                   <li class="tour__tags-item tags-item"> <a href="#"> Шоппинг</a></li>
+                  <li class="tour__tags__button"><span>+4 еще</span></li>
                 </ul>
               </div>
               <aside class="tour__sidebar"> 
@@ -207,9 +217,16 @@
                       </div>
                     </div>
                   </div>
-                  <div class="tour__sidebar__desc-item"> 
+                  <div class="tour__sidebar__desc-item languages">
                     <div class="tour__sidebar__desc-item__left">Язык группы</div>
                     <div class="tour__sidebar__desc-item__right">русский, иврит, английский</div>
+                  </div>
+                  <div class="tour__sidebar__sgl-mobile">
+                    <form class="custom-radio" action="URL">
+                      <input class="custom-radio__input" type="checkbox" id="sql-mobile"/>
+                      <label class="decor" for="sql-mobile"></label>
+                      <label class="custom-radio__label" for="sql-mobile">Размещение SGL + 255 €</label>
+                    </form>
                   </div>
                   <div class="tour__sidebar__dates"> 
                     <div class="tour__sidebar__dates-selected">Даты заезда</div>
@@ -241,13 +258,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="tour__sidebar__sgl-mobile">
-                    <form class="custom-radio" action="URL">
-                      <input class="custom-radio__input" type="checkbox" id="sql-mobile"/>
-                      <label class="decor" for="sql-mobile"></label>
-                      <label class="custom-radio__label" for="sql-mobile">Размещение SGL + 255 €</label>
-                    </form>
                   </div>
                 </div>
                 <div class="tour__sidebar__bottom">
@@ -1075,6 +1085,22 @@
                 <li class="footer__menu-link">Цизлинг д.26 </li>
                 <li class="footer__menu-link">Компания временно работает удаленно</li>
               </ul>
+              <div class="footer__socials-mobile">
+                <div class="footer__socials-text semi-bold">Мы в соцсетях:</div>
+                <ul class="footer__socials__list"> 
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></li>
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></li>
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></li>
+                </ul>
+              </div>
+              <div class="footer__lang-mobile">
+                <div class="footer__lang-text semi-bold">Выберите язык:</div>
+                <ul class="footer__lang__list">
+                  <li class="footer__lang-item active"><a href="#">RU </a></li>
+                  <li class="footer__lang-item"><a href="#">EN </a></li>
+                  <li class="footer__lang-item"> <a href="#">HE </a></li>
+                </ul>
+              </div>
             </div>
             <div class="footer__payments">
               <div class="footer__payments-text semi-bold">Способы оплаты:</div>
@@ -1098,8 +1124,8 @@
         </div>
       </div>
     </div>
-    <script src="js/swiper.js?_v=20230307191716"></script>
-    <script src="js/spollers.js?_v=20230307191716"></script>
-    <script src="js/app.js?_v=20230307191716"></script>
+    <script src="js/swiper.js?_v=20230308082048"></script>
+    <script src="js/spollers.js?_v=20230308082048"></script>
+    <script src="js/app.js?_v=20230308082048"></script>
   </body>
 </html>
