@@ -1,5 +1,5 @@
 
-document.body.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', (event) => {
   document.body.addEventListener('click', (e) => {
     // Get the target element of the click event
     const target = e.target;
@@ -12,7 +12,7 @@ document.body.addEventListener('DOMContentLoaded', (event) => {
       document.querySelector('.tour__tags').classList.toggle('active');
     }
   })
-  
+
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     slidesPerView: 3,
     spaceBetween: 16,
