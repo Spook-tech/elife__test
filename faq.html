@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Заголовок</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230326161636" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230326161636"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230326161636"/>
+  </head>
+  <body> 
+    <div class="wrapper">
+      <section class="sale">
+        <div class="sale__container"> 
+          <div class="sale__text"> 
+            <div class="sale__title">Предложение недели!</div>
+            <div class="sale__subtitle">Лови суперскидки прямо сейчас!</div>
+          </div>
+          <div class="sale__timer">
+            <div class="sale__timer-text">До конца акции осталось:  </div>
+            <div class="sale__timer-numbers"> <span class="days">365 дней</span><span class="hours">15 ч.</span><span> : </span><span class="minutes">46 мин. </span></div>
+          </div>
+        </div>
+      </section>
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo"><a href="index.html"> <img src="img/icons/logo.svg" alt="ElifeTours"/></a></div>
+          <div class="header__menu"> 
+            <ul class="header__list"> 
+              <li class="header__link hover__effect-line"><a href="#">Авиабилеты</a></li>
+              <li class="header__link hover__effect-line active"><a href="#">Туры</a></li>
+              <li class="header__link hover__effect-line"><a href="#">Отели</a></li>
+              <li class="header__link hover__effect-line"><a href="#">Направления</a></li>
+              <li class="header__link hover__effect-line"><a href="#">Страны</a></li>
+              <li class="header__link accounts"><a href="#">Аккаунт и заказы</a>
+                <div class="header__account">
+                  <div class="header__account__wrapper">
+                    <div class="header__account-title">Мой аккаунт</div>
+                    <div class="header__account__buttons"><a class="header__account-button button-box" href="#">Log In</a><a class="header__account-button button-box" href="#">Sign Up</a></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="header__lang">
+            <div class="header__lang-icon"> <picture><source srcset="img/icons/earth-icon.webp" type="image/webp"><img src="img/icons/earth-icon.png" alt=""/></picture></div>
+            <div class="header__lang-text">RU</div>
+          </div>
+          <ul class="header__socials"> 
+            <li class="header__socials-item"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></li>
+            <li class="header__socials-item"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></li>
+            <li class="header__socials-item"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></li>
+            <li class="header__socials-item"> <picture><source srcset="img/icons/heart.webp" type="image/webp"><img src="img/icons/heart.png" alt=""/></picture></li>
+          </ul>
+          <div class="header__burger"><span></span></div>
+        </div>
+      </header>
+      <main>
+        <section class="filters"> 
+          <div class="filters__container">
+            <form class="filters__form" action="URL">
+              <div class="filters__from filters__item">
+                <div class="filters__item-top"> 
+                  <div class="filters__item-top__icon"><picture><source srcset="img/icons/flight-black.webp" type="image/webp"><img src="img/icons/flight-black.png" alt=""/></picture></div>
+                  <div class="filters__item-top__text">Куда</div>
+                  <div class="filters__item-top__text-gray">Выберите направление</div>
+                </div>
+                <div class="filters__item-drop_down-wrapper">
+                  <div class="filters__item-drop_down">
+                    <ul class="filters__from-drop_down">
+                      <li class="filters__from-drop_down-item">
+                        <div class="filters__from-drop_down-item__country">Ирландия</div>
+                        <div class="filters__from-drop_down-item__type">Страна</div>
+                      </li>
+                      <li class="filters__from-drop_down-item">
+                        <div class="filters__from-drop_down-item__country">Евразия</div>
+                        <div class="filters__from-drop_down-item__type">Континент</div>
+                      </li>
+                      <li class="filters__from-drop_down-item">
+                        <div class="filters__from-drop_down-item__country">Ирландия</div>
+                        <div class="filters__from-drop_down-item__type">Страна</div>
+                      </li>
+                      <li class="filters__from-drop_down-item">
+                        <div class="filters__from-drop_down-item__country">Северная Америка</div>
+                        <div class="filters__from-drop_down-item__type">Страна</div>
+                      </li>
+                      <li class="filters__from-drop_down-item">
+                        <div class="filters__from-drop_down-item__country">Рим</div>
+                        <div class="filters__from-drop_down-item__type">Город</div>
+                      </li>
+                      <li class="filters__from-drop_down-item">
+                        <div class="filters__from-drop_down-item__country">Ирландия</div>
+                        <div class="filters__from-drop_down-item__type">Страна</div>
+                      </li>
+                      <li class="filters__from-drop_down-item">
+                        <div class="filters__from-drop_down-item__country">Австралия</div>
+                        <div class="filters__from-drop_down-item__type">Континент</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__date filters__item">
+                <div class="filters__item-top"> 
+                  <div class="filters__item-top__icon"><picture><source srcset="img/icons/calendar.webp" type="image/webp"><img src="img/icons/calendar.png" alt=""/></picture></div>
+                  <div class="filters__item-top__text">Когда</div>
+                  <div class="filters__item-top__text-gray">Выберите дату</div>
+                </div>
+                <div class="filters__item-drop_down-wrapper">
+                  <div class="filters__item-drop_down">
+                    <div class="filters__date-drop_down">
+                      <div class="filters__date-drop_down-top">
+                        <div class="filters__date-drop_down-title">Весь месяц</div>
+                        <div class="filters__date-drop_down-text">Конкретная дата</div>
+                      </div>
+                      <div class="filters__date-drop_down__items">
+                        <div class="filters__date-drop_down-item">Январь</div>
+                        <div class="filters__date-drop_down-item">Февраль</div>
+                        <div class="filters__date-drop_down-item">Март</div>
+                        <div class="filters__date-drop_down-item">Апрель</div>
+                        <div class="filters__date-drop_down-item">Май</div>
+                        <div class="filters__date-drop_down-item">Июнь</div>
+                        <div class="filters__date-drop_down-item">Июль</div>
+                        <div class="filters__date-drop_down-item">Август</div>
+                        <div class="filters__date-drop_down-item">Сентябрь</div>
+                        <div class="filters__date-drop_down-item">Октябрь</div>
+                        <div class="filters__date-drop_down-item">Ноябрь</div>
+                        <div class="filters__date-drop_down-item">Декабрь</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filters__type filters__item">
+                <div class="filters__item-top"> 
+                  <div class="filters__item-top__icon"><picture><source srcset="img/icons/palm.webp" type="image/webp"><img src="img/icons/palm.png" alt=""/></picture></div>
+                  <div class="filters__item-top__text">Вид тура</div>
+                </div>
+              </div>
+              <div class="filters__button"> 
+                <button class="button-box" id="filters-btn">Найти</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="breadcrumb">
+          <div class="breadcrumb__container">
+            <ul class="breadcrumb__list">
+              <li><a href="index.html">Главная</a></li>
+              <li> <a href="#">Полезная информация</a></li>
+              <li> <a href="#">FAQ</a></li>
+            </ul>
+          </div>
+        </section>
+        <aside class="socials"> 
+          <ul class="socials__list"> 
+            <li class="socials-facebook"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></li>
+            <li class="socials-telegram"><a href="#"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></a></li>
+            <li class="socials-whatsapp"><a href="#"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></a></li>
+            <li class="socials-favourites"><a href="#"> <picture><source srcset="img/icons/heart.webp" type="image/webp"><img src="img/icons/heart.png" alt=""/></picture><span>3</span></a></li>
+          </ul>
+        </aside>
+        <section class="faq">
+          <div class="faq__container">
+            <div class="faq__wrapper">
+              <div class="faq__list" data-spollers="" data-one-spoller="">
+                <div class="faq-item">
+                  <button class="faq-item__title" type="button" data-spoller=""><span>Какие способы онлайн оплаты существуют?</span></button>
+                  <div class="faq-item__content">
+                    <p> Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы. Например, вы приобретаете страховку с франшизой 20$, обращаетесь с визитом к врачу. Врач оказывает вам помощь на сумму 35$. Ваши расходы составят 20$, а расходы страховой компании - 15$. В зависимости от страховой компании и направления меняются условия.</p>
+                    <p>Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-item__title" type="button" data-spoller=""><span>Какие способы онлайн оплаты существуют?</span></button>
+                  <div class="faq-item__content">
+                    <p> Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы. Например, вы приобретаете страховку с франшизой 20$, обращаетесь с визитом к врачу. Врач оказывает вам помощь на сумму 35$. Ваши расходы составят 20$, а расходы страховой компании - 15$. В зависимости от страховой компании и направления меняются условия.</p>
+                    <p>Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-item__title" type="button" data-spoller=""><span>Какие способы онлайн оплаты существуют?</span></button>
+                  <div class="faq-item__content">
+                    <p> Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы. Например, вы приобретаете страховку с франшизой 20$, обращаетесь с визитом к врачу. Врач оказывает вам помощь на сумму 35$. Ваши расходы составят 20$, а расходы страховой компании - 15$. В зависимости от страховой компании и направления меняются условия.</p>
+                    <p>Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-item__title" type="button" data-spoller=""><span>Какие способы онлайн оплаты существуют?</span></button>
+                  <div class="faq-item__content">
+                    <p> Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы. Например, вы приобретаете страховку с франшизой 20$, обращаетесь с визитом к врачу. Врач оказывает вам помощь на сумму 35$. Ваши расходы составят 20$, а расходы страховой компании - 15$. В зависимости от страховой компании и направления меняются условия.</p>
+                    <p>Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-item__title" type="button" data-spoller=""><span>Какие способы онлайн оплаты существуют?</span></button>
+                  <div class="faq-item__content">
+                    <p> Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы. Например, вы приобретаете страховку с франшизой 20$, обращаетесь с визитом к врачу. Врач оказывает вам помощь на сумму 35$. Ваши расходы составят 20$, а расходы страховой компании - 15$. В зависимости от страховой компании и направления меняются условия.</p>
+                    <p>Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-item__title" type="button" data-spoller=""><span>Какие способы онлайн оплаты существуют?</span></button>
+                  <div class="faq-item__content">
+                    <p> Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы. Например, вы приобретаете страховку с франшизой 20$, обращаетесь с визитом к врачу. Врач оказывает вам помощь на сумму 35$. Ваши расходы составят 20$, а расходы страховой компании - 15$. В зависимости от страховой компании и направления меняются условия.</p>
+                    <p>Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы.</p>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button class="faq-item__title" type="button" data-spoller=""><span>Какие способы онлайн оплаты существуют?</span></button>
+                  <div class="faq-item__content">
+                    <p> Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы. Например, вы приобретаете страховку с франшизой 20$, обращаетесь с визитом к врачу. Врач оказывает вам помощь на сумму 35$. Ваши расходы составят 20$, а расходы страховой компании - 15$. В зависимости от страховой компании и направления меняются условия.</p>
+                    <p>Базовое медицинское страхование на случай внезапного заболевания в туре включает франшизу. Это значит, что в договоре фиксируется сумма, которую туристу придется оплатить самостоятельно при каждом визите к врачу, независимо от того, на какую сумму будет произведено обслуживание. Страховая компания берет на себя только оплату расходов сверх этой суммы.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__wrapper">
+            <div class="footer__info">
+              <div class="footer__logo"><a href="#"> <img src="img/icons/logo.svg" alt=""/></a></div>
+              <div class="footer__socials">
+                <div class="footer__socials-text semi-bold">Мы в соцсетях:</div>
+                <ul class="footer__socials__list"> 
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></li>
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></li>
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></li>
+                </ul>
+              </div>
+              <div class="footer__lang"> 
+                <div class="footer__lang-text semi-bold">Выберите язык:</div>
+                <ul class="footer__lang__list">
+                  <li class="footer__lang-item active"><a href="#">RU </a></li>
+                  <li class="footer__lang-item"><a href="#">EN </a></li>
+                  <li class="footer__lang-item"> <a href="#">HE </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__menu">
+              <ul class="footer__menu-item"> 
+                <li class="footer__menu-link"><a class="hover__effect-line" href="#">Авиабилеты</a></li>
+                <li class="footer__menu-link"><a class="hover__effect-line" href="#">Туры</a></li>
+                <li class="footer__menu-link"><a class="hover__effect-line" href="#">Отели</a></li>
+                <li class="footer__menu-link"><a class="hover__effect-line" href="#">Направления</a></li>
+              </ul>
+              <ul class="footer__menu-item"> 
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Новости</a></li>
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Статьи</a></li>
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Акции и скидки</a></li>
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Аккаунт и заказы</a></li>
+              </ul>
+              <ul class="footer__menu-item"> 
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Семейные туры</a></li>
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Экскурсионные туры</a></li>
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Лечебные и спа туры</a></li>
+                <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Круизы</a></li>
+              </ul>
+              <ul class="footer__menu-item"> 
+                <li class="footer__menu-link semi-bold">Связаться с нами:</li>
+                <li class="footer__menu-link">077-221-90-20</li>
+                <li class="footer__menu-link">вс-пт: 9:00-18:00</li>
+                <li class="footer__menu-link">info@elife.tours</li>
+              </ul>
+              <ul class="footer__menu-item"> 
+                <li class="footer__menu-link semi-bold">Наш адрес:</li>
+                <li class="footer__menu-link">Хайфа (Кирьят Моцкин)</li>
+                <li class="footer__menu-link">Цизлинг д.26 </li>
+                <li class="footer__menu-link">Компания временно работает удаленно</li>
+              </ul>
+              <div class="footer__socials-mobile">
+                <div class="footer__socials-text semi-bold">Мы в соцсетях:</div>
+                <ul class="footer__socials__list"> 
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></li>
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></li>
+                  <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></li>
+                </ul>
+              </div>
+              <div class="footer__lang-mobile">
+                <div class="footer__lang-text semi-bold">Выберите язык:</div>
+                <ul class="footer__lang__list">
+                  <li class="footer__lang-item active"><a href="#">RU </a></li>
+                  <li class="footer__lang-item"><a href="#">EN </a></li>
+                  <li class="footer__lang-item"> <a href="#">HE </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__payments">
+              <div class="footer__payments-text semi-bold">Способы оплаты:</div>
+              <ul class="footer__payments__items"> 
+                <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/visa.webp" type="image/webp"><img src="img/icons/payments/visa.png" alt=""/></picture></li>
+                <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/mastercard.webp" type="image/webp"><img src="img/icons/payments/mastercard.png" alt=""/></picture></li>
+                <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/paypal.webp" type="image/webp"><img src="img/icons/payments/paypal.png" alt=""/></picture></li>
+                <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/payment-4.webp" type="image/webp"><img src="img/icons/payments/payment-4.png" alt=""/></picture></li>
+                <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/leumi-card.webp" type="image/webp"><img src="img/icons/payments/leumi-card.png" alt=""/></picture></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="popup" id="tour-map" aria-hidden="true">
+      <div class="popup__body">
+        <div class="popup__content tour-map">
+          <button class="close-popup popup__close" data-close="" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" x="0" y="0" viewBox="0 0 64 64" style="enable-background:new 0 0 512 512" xml:space="preserve">
+              <g>
+                <path d="M4.59 59.41a2 2 0 0 0 2.83 0L32 34.83l24.59 24.58a2 2 0 0 0 2.83-2.83L34.83 32 59.41 7.41a2 2 0 0 0-2.83-2.83L32 29.17 7.41 4.59a2 2 0 0 0-2.82 2.82L29.17 32 4.59 56.59a2 2 0 0 0 0 2.82z" fill="#000000" data-original="#000000"></path>
+              </g>
+            </svg>
+          </button>
+          <div class="tour-map__wrapper">
+            <div class="tour-map__title mobile">Клуб Марко Поло: Ирландия без свободных дней </div>
+            <div class="tour-map__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14641.106895500392!2d-0.43688371820591515!3d39.51644021939988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6045072b1b8e7b%3A0x4c20431f5ddbaecd!2z0JPQvtC00LXQu9GM0Y8sINCS0LDQu9C10L3RgdC40Y8sINCY0YHQv9Cw0L3QuNGP!5e0!3m2!1sru!2sua!4v1677603845515!5m2!1sru!2sua" width="991" height="898" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="tour-map__content"> 
+              <div class="tour-map__title">Клуб Марко Поло: Ирландия без свободных дней</div>
+              <div class="tour-map__price">
+                <div class="tour__sidebar__price">50000 € /чел.</div>
+                <div class="tour-map__sql">Размещение SGL + 255 €</div>
+              </div>
+              <div class="tour-map__route">
+                <div class="tour-map__route__title">Маршрут:</div>
+                <div class="tour-map__route__items">
+                  <div class="tour-map__route-item">
+                    <div class="tour-map__route-item__icon green"><picture><source srcset="img/icons/geo-tag__white.webp" type="image/webp"><img src="img/icons/geo-tag__white.png" alt=""/></picture></div>
+                    <div class="tour-map__route-item__text">Валенсия</div>
+                  </div>
+                  <div class="tour-map__route-item">
+                    <div class="tour-map__route-item__icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#5DA8F4"></circle>
+                        <circle cx="10" cy="10" r="5" fill="white"></circle>
+                      </svg>
+                    </div>
+                    <div class="tour-map__route-item__text">Рим</div>
+                  </div>
+                  <div class="tour-map__route-item">
+                    <div class="tour-map__route-item__icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#5DA8F4"></circle>
+                        <circle cx="10" cy="10" r="5" fill="white"></circle>
+                      </svg>
+                    </div>
+                    <div class="tour-map__route-item__text">Рим</div>
+                  </div>
+                  <div class="tour-map__route-item">
+                    <div class="tour-map__route-item__icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#5DA8F4"></circle>
+                        <circle cx="10" cy="10" r="5" fill="white"></circle>
+                      </svg>
+                    </div>
+                    <div class="tour-map__route-item__text">Рим</div>
+                  </div>
+                  <div class="tour-map__route-item">
+                    <div class="tour-map__route-item__icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#5DA8F4"></circle>
+                        <circle cx="10" cy="10" r="5" fill="white"></circle>
+                      </svg>
+                    </div>
+                    <div class="tour-map__route-item__text">Рим</div>
+                  </div>
+                  <div class="tour-map__route-item">
+                    <div class="tour-map__route-item__icon">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="10" fill="#5DA8F4"></circle>
+                        <circle cx="10" cy="10" r="5" fill="white"></circle>
+                      </svg>
+                    </div>
+                    <div class="tour-map__route-item__text">Рим</div>
+                  </div>
+                  <div class="tour-map__route-item">
+                    <div class="tour-map__route-item__icon red"><picture><source srcset="img/icons/flag.webp" type="image/webp"><img src="img/icons/flag.png" alt=""/></picture></div>
+                    <div class="tour-map__route-item__text">Рим</div>
+                  </div>
+                </div>
+              </div>
+              <div class="tour-map__button"> <a class="button-box" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                    <g>
+                      <path fill="transparent" stroke-width="20px" stroke="#d7443e" d="M449.28 121.43a115.2 115.2 0 0 0-137.89-35.75c-21.18 9.14-40.07 24.55-55.39 45-15.32-20.5-34.21-35.91-55.39-45a115.2 115.2 0 0 0-137.89 35.75c-16.5 21.62-25.22 48.64-25.22 78.13 0 42.44 25.31 89 75.22 138.44 40.67 40.27 88.73 73.25 113.75 89.32a54.78 54.78 0 0 0 59.06 0c25-16.07 73.08-49.05 113.75-89.32 49.91-49.42 75.22-96 75.22-138.44 0-29.49-8.72-56.51-25.22-78.13z" data-original="#f9595f"></path>
+                    </g>
+                  </svg><span>В избранное </span></a></div>
+              <div class="tour-map__socials"> 
+                <div class="tour-map__share"><img src="img/icons/share.svg" alt=""/>Поделиться</div>
+                <div class="tour-map__facebook"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></div>
+                <div class="tour-map__telegram"><picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></div>
+                <div class="tour-map__whatsapp"><picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20230326161636"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230326161636"></script>
+    <script src="js/popups.js?_v=20230326161636"></script>
+    <script src="js/swiper.js?_v=20230326161636"></script>
+    <script src="js/spollers.js?_v=20230326161636"></script>
+    <script src="js/datepicker.js?_v=20230326161636"></script>
+    <script src="js/lazyload.js?_v=20230326161636"></script>
+    <script src="js/app.js?_v=20230326161636"></script>
+  </body>
+</html>
