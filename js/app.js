@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  const contactsLine = $('.contacts-line');
-
+  
+  // Обработка при клике
   $(document).on('click', function(e) {
     const target = e.target;
     console.log(target);
@@ -20,7 +20,11 @@ $(document).ready(function() {
       $('.search__filters-wrapper').toggleClass('active');
     }
   });
+  // Обработка при клике
 
+
+  // Показываем и скрываем полоску с контактами при скролле
+  const contactsLine = $('.contacts-line');
   let scrolling;
   $(window).on("scroll", function() {
     let scrolled = $(window).scrollTop();
@@ -37,7 +41,10 @@ $(document).ready(function() {
       contactsLine.removeClass('hidden');
     }, 1000);
   });
+  // Показываем и скрываем полоску с контактами при скролле
 
+
+  // Скрипт для подсчета количества тегов на странице тура
   const tagsContainer = $('.tour__tags-mobile');
   if (tagsContainer.length > 0) {
     const tags = $('.tags-item', tagsContainer);
@@ -56,7 +63,10 @@ $(document).ready(function() {
     $(window).on('resize', calculateNumChild);
     calculateNumChild();
   }
+  // Скрипт для подсчета количества тегов на странице тура
 
+
+  // Слайдеры //
   const reviewsSwiper = new Swiper('.reviews__swiper', {
     slidesPerView: 3,
     spaceBetween: 16,
@@ -92,8 +102,11 @@ $(document).ready(function() {
         spaceBetween: 20
       },
       1195: {
+        spaceBetween: 30
+      },
+      1388: {
         spaceBetween: 46
-      }
+      },
     }
   });
   const newsSwiper = new Swiper('.articles-news__swiper', {
@@ -177,6 +190,10 @@ $(document).ready(function() {
       },
     }
   });
+  // Слайдеры //
+
+
+  // Фильтры даты и цены на странице поиска //
   const daysRangeInput = $('.search__filters-days .js-range-slider');
   daysRangeInput.ionRangeSlider({
     min: 1,
@@ -212,7 +229,38 @@ $(document).ready(function() {
       budgetRangeTextFrom.text(data.from);
     }    
   });
-  datepicker('#datetimepicker');
-});
+  // Фильтры даты и цены на странице поиска //
 
+
+  // Использую библиотеку Datepicker.js для создания фильтра времени на странице поиска
+  if ($('#datetimepicker').length > 0){
+    datepicker('#datetimepicker');
+  }
+  // Использую библиотеку Datepicker.js для создания фильтра времени на странице поиска
+  
+
+  // Таймер в блоке "Предложение недели"
+  const timerEndDate = $('.sale__timer').data('end-date');
+
+  function updateTimer() {
+    const now = new Date();
+    const endDate = new Date(timerEndDate);
+    if (endDate == 'Invalid Date'){
+      $('.hours').text(`ошибка`);
+      return;
+    }
+    const timeLeft = endDate - now;
+    const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hoursLeft = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+    const minutesLeft = Math.floor((timeLeft / (1000 * 60)) % 60);
+
+    $('.days').text(`${daysLeft} дней`);
+    $('.hours').text(`${hoursLeft} ч.`);
+    $('.minutes').text(`${minutesLeft} мин.`);
+  }
+
+  setInterval(updateTimer, 5000);
+  updateTimer();
+  // Таймер в блоке "Предложение недели"
+});
   
