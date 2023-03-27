@@ -246,7 +246,7 @@ $(document).ready(function() {
     const now = new Date();
     const endDate = new Date(timerEndDate);
     if (endDate == 'Invalid Date'){
-      $('.hours').text(`ошибка`);
+      $('.sale__timer-numbers ').css('display', 'none');
       return;
     }
     const timeLeft = endDate - now;
@@ -254,9 +254,9 @@ $(document).ready(function() {
     const hoursLeft = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
     const minutesLeft = Math.floor((timeLeft / (1000 * 60)) % 60);
 
-    $('.days').text(`${daysLeft} дней`);
-    $('.hours').text(`${hoursLeft} ч.`);
-    $('.minutes').text(`${minutesLeft} мин.`);
+    $('.days-number').text(`${daysLeft}`);
+    $('.hours-number').text(`${hoursLeft}`);
+    $('.minutes-number ').text(`${minutesLeft}`);
   }
 
   setInterval(updateTimer, 5000);
