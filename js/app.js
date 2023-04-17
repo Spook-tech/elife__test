@@ -362,3 +362,93 @@ $(document).ready(function() {
   }
   // Плашка поиска
 }(jQuery));  
+
+
+// POPUPS
+const popupLinks = document.querySelectorAll(".popup-link"),
+body = document.querySelector("html"),
+lockPadding = document.querySelectorAll(".lock-padding");
+let unlock = !0;
+const timeout = 500;
+const popupCloseIcon = document.querySelectorAll(".close-popup");
+
+if (popupLinks.length > 0) {
+   for (let a = 0; a < popupLinks.length; a++) {
+      let b = popupLinks[a];
+      b.addEventListener("click", function (a) {
+        console.log(b);
+         let c = b.getAttribute("href").replace("#", ""),
+                d = document.getElementById(c);
+            popupOpen(d), a.preventDefault();
+            console.log(b);
+        });
+    }
+}
+if (popupCloseIcon.length > 0)
+    for (let index = 0; index < popupCloseIcon.length; index++) {
+        let c = popupCloseIcon[index];
+        c.addEventListener("click", function (a) {
+            popupClose(c.closest(".popup")), a.preventDefault();
+        });
+    }
+function popupOpen(a) {
+    if (a && unlock) {
+        let b = document.querySelector(".popup.open");
+        b ? popupClose(b, !1) : bodyLock(),
+            a.classList.add("open"),
+            a.addEventListener("click", function (a) {
+                a.target.closest(".popup__content") || popupClose(a.target.closest(".popup"));
+            });
+    }
+}
+function popupClose(a, b = !0) {
+    unlock && (a.classList.remove("open"), b && bodyUnLock());
+}
+function bodyLock() {
+    let b = window.innerWidth - document.querySelector("body").offsetWidth + "px";
+    if (lockPadding.length > 0)
+        for (let a = 0; a < lockPadding.length; a++) {
+            let c = lockPadding[a];
+            c.style.paddingRight = b;
+        }
+    (body.style.paddingRight = b),
+        body.classList.add("lock"),
+        (unlock = !1),
+        setTimeout(function () {
+            unlock = !0;
+        }, 500);
+}
+function bodyUnLock() {
+    setTimeout(function () {
+        if (lockPadding.length > 0)
+            for (let a = 0; a < lockPadding.length; a++) {
+                let b = lockPadding[a];
+                b.style.paddingRight = "0px";
+            }
+        (body.style.paddingRight = "0px"), body.classList.remove("lock");
+    }, 500),
+        (unlock = !1),
+        setTimeout(function () {
+            unlock = !0;
+        }, 500);
+}
+document.addEventListener("keydown", function (a) {
+    if (27 === a.which) {
+        let b = document.querySelector(".popup.open");
+        popupClose(b);
+    }
+}),
+    Element.prototype.closest ||
+        (Element.prototype.closest = function (b) {
+            for (var a = this; a; ) {
+                if (a.matches(b)) return a;
+                a = a.parentElement;
+            }
+            return null;
+        }),
+    Element.prototype.matches || (Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector);
+// POPUPS
+
+// SPOLLERS
+const spollersArray=document.querySelectorAll("[data-spollers]");if(spollersArray.length>0){let e=Array.from(spollersArray).filter(function(e,t,s){return!e.dataset.spollers.split(",")[0]});e.length>0&&r(e);let t=Array.from(spollersArray).filter(function(e,t,s){return e.dataset.spollers.split(",")[0]});if(t.length>0){let s=[];t.forEach(e=>{let t=e.dataset.spollers,l={},r=t.split(",");l.value=r[0],l.type=r[1]?r[1].trim():"max",l.item=e,s.push(l)});let l=s.map(function(e){return"("+e.type+"-width: "+e.value+"px),"+e.value+","+e.type});(l=l.filter(function(e,t,s){return s.indexOf(e)===t})).forEach(e=>{let t=e.split(","),l=t[1],i=t[2],o=window.matchMedia(t[0]),n=s.filter(function(e){if(e.value===l&&e.type===i)return!0});o.addListener(function(){r(n,o)}),r(n,o)})}function r(e,t=!1){e.forEach(e=>{e=t?e.item:e,t.matches||!t?(e.classList.add("_init"),i(e),e.addEventListener("click",o)):(e.classList.remove("_init"),i(e,!1),e.removeEventListener("click",o))})}function i(e,t=!0){let s=e.querySelectorAll("[data-spoller]");s.length>0&&s.forEach(e=>{t?(e.removeAttribute("tabindex"),e.classList.contains("_active")||(e.nextElementSibling.hidden=!0)):(e.setAttribute("tabindex","-1"),e.nextElementSibling.hidden=!1)})}function o(e){let t=e.target;if(t.hasAttribute("data-spoller")||t.closest("[data-spoller]")){let s=t.hasAttribute("data-spoller")?t:t.closest("[data-spoller]"),l=s.closest("[data-spollers]"),r=!!l.hasAttribute("data-one-spoller");l.querySelectorAll("._slide").length||(r&&!s.classList.contains("_active")&&n(l),s.classList.toggle("_active"),_slideToggle(s.nextElementSibling,500)),e.preventDefault()}}function n(e){let t=e.querySelector("[data-spoller]._active");t&&(t.classList.remove("_active"),_slideUp(t.nextElementSibling,500))}}let _slideUp=(e,t=500)=>{e.classList.contains("_slide")||(e.classList.add("_slide"),e.style.transitionProperty="height, margin, padding",e.style.transitionDuration=t+"ms",e.style.height=e.offsetHeight+"px",e.offsetHeight,e.style.overflow="hidden",e.style.height=0,e.style.paddingTop=0,e.style.paddingBottom=0,e.style.marginTop=0,e.style.marginBottom=0,window.setTimeout(()=>{e.hidden=!0,e.style.removeProperty("height"),e.style.removeProperty("padding-top"),e.style.removeProperty("padding-bottom"),e.style.removeProperty("margin-top"),e.style.removeProperty("margin-bottom"),e.style.removeProperty("overflow"),e.style.removeProperty("transition-duration"),e.style.removeProperty("transition-property"),e.classList.remove("_slide")},t))},_slideDown=(e,t=500)=>{if(!e.classList.contains("_slide")){e.classList.add("_slide"),e.hidden&&(e.hidden=!1);let s=e.offsetHeight;e.style.overflow="hidden",e.style.height=0,e.style.paddingTop=0,e.style.paddingBottom=0,e.style.marginTop=0,e.style.marginBottom=0,e.offsetHeight,e.style.transitionProperty="height, margin, padding",e.style.transitionDuration=t+"ms",e.style.height=s+"px",e.style.removeProperty("padding-top"),e.style.removeProperty("padding-bottom"),e.style.removeProperty("margin-top"),e.style.removeProperty("margin-bottom"),window.setTimeout(()=>{e.style.removeProperty("height"),e.style.removeProperty("overflow"),e.style.removeProperty("transition-duration"),e.style.removeProperty("transition-property"),e.classList.remove("_slide")},t)}},_slideToggle=(e,t=500)=>e.hidden?_slideDown(e,t):_slideUp(e,t);
+// SPOLLERS

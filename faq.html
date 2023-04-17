@@ -4,14 +4,14 @@
     <title>Заголовок</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230417193624" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230417201816" rel="stylesheet"/>
     <meta charset="UTF-8"/>
     <meta name="format-detection" content="telephone=no"/>
     <link rel="shortcut icon" href="favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230417193624"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css?_v=20230417193624"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230417193624"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230417201816"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css?_v=20230417201816"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230417201816"/>
   </head>
   <body> 
     <div class="wrapper">
@@ -438,16 +438,14 @@
         <div class="popup__content application-accepted"><span>Спасибо!</span><br/><span>Ваша заявка принята, мы свяжемся с Вами ближайшее время </span></div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20230417193624"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230417193624"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js?_v=20230417193624" integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/popups.js?_v=20230417193624"></script>
-    <script src="js/swiper.js?_v=20230417193624"></script>
-    <script src="js/spollers.js?_v=20230417193624"></script>
-    <script src="js/photoswipe.js?_v=20230417193624"></script>
-    <script src="js/datepicker.js?_v=20230417193624"></script>
-    <script src="js/lazyload.js?_v=20230417193624" type="module"></script>
-    <script src="js/app.js?_v=20230417193624"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20230417201816"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230417201816"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js?_v=20230417201816" integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/swiper.js?_v=20230417201816"></script>
+    <script src="js/photoswipe.js?_v=20230417201816"></script>
+    <script src="js/datepicker.js?_v=20230417201816"></script>
+    <script src="js/lazyload.js?_v=20230417201816" type="module"></script>
+    <script src="js/app.js?_v=20230417201816"></script>
     <script>
       // Создаем карту
       const mymap = L.map('map').setView([45.9028, 10.4964], 5);
@@ -489,16 +487,16 @@
       movingMarker.addTo(mymap);
       
       // Используем setInterval для перемещения маркера по линиям
-      let i = 0;
+      let index = 0;
       let interval = setInterval(function () {
           // Перемещаем маркер к следующей точке
-          movingMarker.setLatLng(cities[i].latlng);
-          // Увеличиваем значение i на 1
-          i++;
+          movingMarker.setLatLng(cities[index].latlng);
+          // Увеличиваем значение index на 1
+          index++;
       
           // Если мы достигли последней точки, сбрасываем значение i на 0
-          if (i === cities.length) {
-            i = 0;
+          if (index === cities.length) {
+            index = 0;
           }
       }, 1000);
       // Создаем карту
