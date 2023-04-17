@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.min.css?_v=20230417193624"/>
   </head>
   <body> 
-    <div class="wrapper">
+    <div class="wrapper contacts-page">
       <section class="sale">
         <div class="sale__container"> 
           <div class="sale__text"> 
@@ -61,6 +61,14 @@
         </div>
       </header>
       <main>
+        <section class="breadcrumb">
+          <div class="breadcrumb__container">
+            <ul class="breadcrumb__list">
+              <li><a href="index.html">Главная</a></li>
+              <li> <a href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </section>
         <aside class="socials"> 
           <ul class="socials__list"> 
             <li class="socials-facebook"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></li>
@@ -89,104 +97,51 @@
             </div>
           </div>
         </section>
-        <section class="breadcrumb">
-          <div class="breadcrumb__container">
-            <ul class="breadcrumb__list">
-              <li><a href="index.html">Главная</a></li>
-              <li> <a href="#">О нас</a></li>
-              <li> <a href="#">Новости</a></li>
-            </ul>
+        <section class="contacts"> 
+          <div class="contacts__container"> 
+            <div class="contacts__row"> 
+              <div class="contacts__content"> 
+                <div class="contacts__title">
+                  <h2>Контакты</h2>
+                  <div class="contacts__content-items"> 
+                    <div class="contacts__content-item">
+                      <div class="contacts__content-item__left">Адрес:</div>
+                      <div class="contacts__content-item__right">Хайфа (Кирьят Моцкин). Цизлинг д.26 (компания временно работает удаленно)</div>
+                    </div>
+                    <div class="contacts__content-item">
+                      <div class="contacts__content-item__left">Телефоны:</div>
+                      <div class="contacts__content-item__right">(077) 221-90-20</div>
+                    </div>
+                    <div class="contacts__content-item">
+                      <div class="contacts__content-item__left">Эл. почта:</div>
+                      <div class="contacts__content-item__right"><a class="hover__effect-line" href="mailto:info@elife.tours">info@elife.tours</a></div>
+                    </div>
+                    <div class="contacts__content-item">
+                      <div class="contacts__content-item__left">Режим работы:</div>
+                      <div class="contacts__content-item__right">вс-чт: 9:00-18:00, сб - выходной</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contacts"></div>
+              </div>
+              <form class="contacts__form" action="URL">
+                <h2>Связаться с нами</h2>
+                <div class="contacts__form-inputs">
+                  <input type="text" name="name" placeholder="Ваше имя"/>
+                  <input type="text" name="email" placeholder="Email"/>
+                  <textarea class="textarea" type="text" name="message" placeholder="Сообщение"></textarea>
+                </div>
+                <div class="contacts__form-buttons">
+                  <div class="contacts__form-recaptcha"> <picture><source srcset="img/photos/recaptcha.webp" type="image/webp"><img src="img/photos/recaptcha.png" alt=""/></picture></div>
+                  <button class="contacts__form-btn button-box" type="submit">Отправить</button>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
-        <section class="news"> 
-          <div class="news__container"> 
-            <div class="news__top">
-              <ul class="news__top-links"> 
-                <li class="news__top-link"> <a href="#">Интересные статьи </a></li>
-                <li class="news__top-link"><a href="#">Новости </a></li>
-              </ul>
-            </div>
-            <div class="news__items"> 
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="pages__list"><a class="pages__list-button pages__list-button-prev" href="#">
-                <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 2.01709L3 7.01709L8 12.0171L7 14.0171L0 7.01709L7 0.0170898L8 2.01709Z" fill="#3B7EC2"></path>
-                </svg><span>Предыдущая</span></a>
-              <div class="pages__list__items"> <a class="pages__list__item active" href="#">1</a><a class="pages__list__item" href="#">2</a><a class="pages__list__item" href="#">3</a><a class="pages__list__item" href="#">4</a><a class="pages__list__item" href="#">5</a><a class="pages__list__item" href="#">6</a>...<a class="pages__list__item" href="#">10</a></div><a class="pages__list-button pages__list-button-next" href="#"><span>Следующая</span>
-                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.104597 12.1256L5.1242 7.14525L0.143873 2.12565L1.15172 0.129596L8.12417 7.15704L1.09673 14.1295L0.104597 12.1256Z" fill="#3B7EC2"></path>
-                </svg></a>
-            </div>
+        <section class="map-section">
+          <div class="map-section-wrapper _load-map" data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1993.6107658416227!2d35.075827834195216!3d32.82299636260253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151db72599e21a35%3A0x4c77e3abe1a19b95!2zWmlzbGluZyAyNiwgSGFpZmEsINCY0LfRgNCw0LjQu9GM!5e0!3m2!1sru!2sua!4v1680282714698!5m2!1sru!2sua">
+            <div class="map-section-text"></div>
           </div>
         </section>
       </main>

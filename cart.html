@@ -61,6 +61,14 @@
         </div>
       </header>
       <main>
+        <section class="breadcrumb">
+          <div class="breadcrumb__container">
+            <ul class="breadcrumb__list">
+              <li><a href="index.html">Главная</a></li>
+              <li> <a href="#">Корзина</a></li>
+            </ul>
+          </div>
+        </section>
         <aside class="socials"> 
           <ul class="socials__list"> 
             <li class="socials-facebook"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></li>
@@ -89,103 +97,111 @@
             </div>
           </div>
         </section>
-        <section class="breadcrumb">
-          <div class="breadcrumb__container">
-            <ul class="breadcrumb__list">
-              <li><a href="index.html">Главная</a></li>
-              <li> <a href="#">О нас</a></li>
-              <li> <a href="#">Новости</a></li>
-            </ul>
-          </div>
-        </section>
-        <section class="news"> 
-          <div class="news__container"> 
-            <div class="news__top">
-              <ul class="news__top-links"> 
-                <li class="news__top-link"> <a href="#">Интересные статьи </a></li>
-                <li class="news__top-link"><a href="#">Новости </a></li>
-              </ul>
-            </div>
-            <div class="news__items"> 
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
+        <section class="cart">
+          <div class="cart__container">
+            <div class="cart__row">
+              <div class="cart__info"> 
+                <form class="cart__info-ordering" action="URL">
+                  <div class="cart__info-ordering__top">Оформление заказа</div>
+                  <div class="cart__info-ordering__items"> 
+                    <div class="cart__info-ordering-item required">
+                      <div class="cart__info-ordering-item-text">Имя</div>
+                      <div class="cart__info-ordering-item-input">
+                        <input type="text" name="name"/>
+                      </div>
+                    </div>
+                    <div class="cart__info-ordering-item required">
+                      <div class="cart__info-ordering-item-text">Фамилия</div>
+                      <div class="cart__info-ordering-item-input">
+                        <input type="text" name="surname"/>
+                      </div>
+                    </div>
+                    <div class="cart__info-ordering-item required">
+                      <div class="cart__info-ordering-item-text">Номер телефона</div>
+                      <div class="cart__info-ordering-item-input">
+                        <input type="text" name="phone"/>
+                      </div>
+                    </div>
+                    <div class="cart__info-ordering-item required">
+                      <div class="cart__info-ordering-item-text">Email</div>
+                      <div class="cart__info-ordering-item-input">
+                        <input type="text" name="email"/>
+                      </div>
+                    </div>
+                    <div class="cart__info-ordering-item required cart__info-ordering-item-peoples">
+                      <div class="cart__info-ordering-item-text">Количество человек</div>
+                      <div class="cart__info-ordering-item-input">
+                        <div class="cart__info-ordering-item-peoples-item adults"><span>Взрослые</span>
+                          <div class="cart__info-item__number number-block">
+                            <button class="number-block-btn number-block-btn-minus"> <span>-</span></button>
+                            <input class="number-block-input" type="text" readonly="readonly" name="peoples-adult" value="1" style="width: 15px;"/>
+                            <button class="number-block-btn number-block-btn-plus"> <span>+</span></button>
+                          </div><span>Старше 16 лет</span>
+                        </div>
+                        <div class="cart__info-ordering-item-peoples-item kids"><span>Дети</span>
+                          <div class="cart__info-item__number number-block">
+                            <button class="number-block-btn number-block-btn-minus"> <span>-</span></button>
+                            <input class="number-block-input" type="text" readonly="readonly" name="peoples-kids" value="1" style="width: 15px;"/>
+                            <button class="number-block-btn number-block-btn-plus"> <span>+</span></button>
+                          </div><span>От 0 до 15 лет</span>
+                        </div>
+                        <div class="cart__info-ordering-item-peoples-item">
+                          <p>Введите возраст ребенка</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__info-ordering-item required cart__info-ordering-item-payment">
+                      <div class="cart__info-ordering-item-text">Способ оплаты</div>
+                      <div class="cart__info-ordering-item-payment__inputs-wrapper"> 
+                        <div class="cart__info-ordering-item-payment__inputs">
+                          <div class="cart__info-ordering-item-payment-item custom-radio">
+                            <label for="visa">Банковская карта VISA</label>
+                            <input class="custom-radio__input" id="visa" type="radio" name="payment"/>
+                            <label class="decor" for="visa"></label>
+                          </div>
+                          <div class="cart__info-ordering-item-payment-item custom-radio">
+                            <label for="transfer">Перевод на счет</label>
+                            <input class="custom-radio__input" id="transfer" type="radio" name="payment"/>
+                            <label class="decor" for="transfer"></label>
+                          </div>
+                        </div>
+                        <div class="cart__info-ordering-item-payment-text">при оплате картой взымается 3% комиссия банка</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
+                </form>
+              </div>
+              <div class="cart__payment">
+                <div class="cart__payment-top">Оплата заказа</div>
+                <div class="cart__payment-methods"><picture><source srcset="img/icons/payments/visa.webp" type="image/webp"><img src="img/icons/payments/visa.png" alt=""/></picture><picture><source srcset="img/icons/payments/mastercard.webp" type="image/webp"><img src="img/icons/payments/mastercard.png" alt=""/></picture></div>
+                <div class="cart__payment-inputs"> 
+                  <div class="cart__payment-item">
+                    <div class="cart__payment-item__text">имя и фамилия</div>
+                    <div class="cart__payment-item__input"> 
+                      <input type="text" name="name_surname"/>
+                    </div>
+                  </div>
+                  <div class="cart__payment-item">
+                    <div class="cart__payment-item__text">Номер карты</div>
+                    <div class="cart__payment-item__input"> 
+                      <input type="text" name="card_number"/>
+                    </div>
+                  </div>
+                  <div class="cart__payment-item">
+                    <div class="cart__payment-item__text">Номер карты</div>
+                    <div class="cart__payment-item__input"> 
+                      <input type="text" name="card_period"/>
+                    </div>
+                  </div>
+                  <div class="cart__payment-item">
+                    <div class="cart__payment-item__text">Код безопасности</div>
+                    <div class="cart__payment-item__input"> 
+                      <input type="text" name="card_code"/>
+                    </div>
+                    <div class="cart__payment-item__info"> <span class="question">Что такое защитный код<span class="question-content">Мы требуем, чтобы вы ввели проверочный номер своей кредитной карты (CVV), чтобы убедиться, что платеж будет произведен. Ваш номер CVV указан на обратной стороне вашей кредитной карты.</span></span></div>
+                  </div>
                 </div>
               </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="pages__list"><a class="pages__list-button pages__list-button-prev" href="#">
-                <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 2.01709L3 7.01709L8 12.0171L7 14.0171L0 7.01709L7 0.0170898L8 2.01709Z" fill="#3B7EC2"></path>
-                </svg><span>Предыдущая</span></a>
-              <div class="pages__list__items"> <a class="pages__list__item active" href="#">1</a><a class="pages__list__item" href="#">2</a><a class="pages__list__item" href="#">3</a><a class="pages__list__item" href="#">4</a><a class="pages__list__item" href="#">5</a><a class="pages__list__item" href="#">6</a>...<a class="pages__list__item" href="#">10</a></div><a class="pages__list-button pages__list-button-next" href="#"><span>Следующая</span>
-                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.104597 12.1256L5.1242 7.14525L0.143873 2.12565L1.15172 0.129596L8.12417 7.15704L1.09673 14.1295L0.104597 12.1256Z" fill="#3B7EC2"></path>
-                </svg></a>
             </div>
           </div>
         </section>

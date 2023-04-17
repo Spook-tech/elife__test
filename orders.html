@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/style.min.css?_v=20230417193624"/>
   </head>
   <body> 
-    <div class="wrapper">
+    <div class="wrapper orders-page">
       <section class="sale">
         <div class="sale__container"> 
           <div class="sale__text"> 
@@ -61,6 +61,15 @@
         </div>
       </header>
       <main>
+        <section class="breadcrumb">
+          <div class="breadcrumb__container">
+            <ul class="breadcrumb__list">
+              <li><a href="index.html">Главная</a></li>
+              <li> <a href="#">Аккаунт и заказы</a></li>
+              <li> <a href="#">Личный кабинет</a></li>
+            </ul>
+          </div>
+        </section>
         <aside class="socials"> 
           <ul class="socials__list"> 
             <li class="socials-facebook"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></li>
@@ -83,109 +92,63 @@
             <div class="contacts-line__time"><span>Вс-Чт: 9:00-18:00 | Пт: до 13:00</span>
               <div class="contacts-line__time__mobile">
                 <div class="contacts-line__time__mobile-icon"><picture><source srcset="img/icons/calendar2.webp" type="image/webp"><img src="img/icons/calendar2.png" alt=""/></picture>
-                  <div class="contacts-line__time__mobile-text">Вс-Чт: 9:00-18:00 Пт: до 13:00       </div>
+                  <div class="contacts-line__time__mobile-text">Вс-Чт: 9:00-18:00 Пт: до 13:00     </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="breadcrumb">
-          <div class="breadcrumb__container">
-            <ul class="breadcrumb__list">
-              <li><a href="index.html">Главная</a></li>
-              <li> <a href="#">О нас</a></li>
-              <li> <a href="#">Новости</a></li>
-            </ul>
+        <section class="orders empty">
+          <div class="orders__container"> 
+            <p>Для включения “Пустого режима” необходимо добавить класс “empty” к секции “section.orders”. Также можно просто удалить блок .orders-tours”.</p>
+            <div class="orders__row">
+              <div class="orders-empty"> 
+                <div class="orders-empty__text">Вы ещё не совершили ни одной поездки, воспользуйтесь поиском на нашем сайте</div><a class="orders-empty__btn button-box" href="#">Найти тур</a>
+              </div>
+              <div class="orders-tours"></div>
+              <div class="orders-info">
+                <div class="orders-info__top"> 
+                  <div class="orders-info__name">Nataliya Sharova</div>
+                </div>
+                <div class="orders-info__content"> 
+                  <div class="orders-info__stats"> 
+                    <div class="orders-info__stats-item">
+                      <div class="orders-info__stats-item-icon"><picture><source srcset="img/icons/medal-red.webp" type="image/webp"><img src="img/icons/medal-red.png" alt=""/></picture></div>
+                      <div class="orders-info__stats-item-text">Начинающий турист</div>
+                    </div>
+                    <div class="orders-info__stats-item">
+                      <div class="orders-info__stats-item-icon"><picture><source srcset="img/icons/calendar-red.webp" type="image/webp"><img src="img/icons/calendar-red.png" alt=""/></picture></div>
+                      <div class="orders-info__stats-item-text">Стаж туриста 1 день</div>
+                    </div>
+                  </div>
+                  <div class="orders-info__change"> 
+                    <div class="orders-info__change-icon"><picture><source srcset="img/icons/tasks2.webp" type="image/webp"><img src="img/icons/tasks2.png" alt=""/></picture></div>
+                    <div class="orders-info__change-text">Изменить данные пользователя</div><a class="orders-info__change-btn button-box" href="#">Изменить</a>
+                  </div>
+                  <div class="orders-info__invite"> 
+                    <div class="orders-info__invite-text">Приглашайте больше друзей — получайте больше бонусов</div><a class="orders-info__invite-btn button-box" href="#"> <picture><source srcset="img/icons/podarok.webp" type="image/webp"><img src="img/icons/podarok.png" alt=""/></picture><span>Пригласить друга</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <section class="news"> 
-          <div class="news__container"> 
-            <div class="news__top">
-              <ul class="news__top-links"> 
-                <li class="news__top-link"> <a href="#">Интересные статьи </a></li>
-                <li class="news__top-link"><a href="#">Новости </a></li>
-              </ul>
-            </div>
-            <div class="news__items"> 
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
+        <section class="features">
+          <div class="features__container"> 
+            <h2>Возможности туристов Elife Tours</h2>
+            <div class="features__items"> 
+              <div class="features__item">
+                <div class="features__item-icon"> <picture><source srcset="img/icons/money.webp" type="image/webp"><img src="img/icons/money.png" alt=""/></picture></div>
+                <div class="features__item-text">Находите лучшую цену среди всех туристических предложений</div>
               </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
+              <div class="features__item">
+                <div class="features__item-icon"> <picture><source srcset="img/icons/cards.webp" type="image/webp"><img src="img/icons/cards.png" alt=""/></picture></div>
+                <div class="features__item-text">Оплачивайте картой и получайте документы на email или WhatsApp</div>
               </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
+              <div class="features__item">
+                <div class="features__item-icon"> <picture><source srcset="img/icons/person.webp" type="image/webp"><img src="img/icons/person.png" alt=""/></picture></div>
+                <div class="features__item-text">Получайте персональную поддержку в путешествии 24/7, а также косультации</div>
               </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-              <div class="news-item">
-                <div class="news-item__img"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                  <div class="news-item__date-adaptive news-item__date">22.05.2022</div>
-                </div>
-                <div class="news-item__content">
-                  <div class="news-item__img-mobile"> <picture><source srcset="img/photos/news-img1.webp" type="image/webp"><img src="img/photos/news-img1.png" alt=""/></picture>
-                    <div class="news-item__date">22.05.2022</div>
-                  </div>
-                  <div class="news-item__date">22.05.2022</div>
-                  <div class="news-item__name">С 20 мая отменяются все коронавирусные ограничения, введенные ранее из-за прироста заболевших</div>
-                  <div class="news-item__text">Данное решение было принято после снижения количества заболевших в сутки. Если прирост заболеваемости подскочит - ограничения введут в полной мере. Также это касается и проведения тестов в зале аэропорта. Заполенние декларации на въезд остается в силе.</div>
-                  <div class="news-item__button"> <a class="button-box" href="#">Читать далее</a></div>
-                </div>
-              </div>
-            </div>
-            <div class="pages__list"><a class="pages__list-button pages__list-button-prev" href="#">
-                <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 2.01709L3 7.01709L8 12.0171L7 14.0171L0 7.01709L7 0.0170898L8 2.01709Z" fill="#3B7EC2"></path>
-                </svg><span>Предыдущая</span></a>
-              <div class="pages__list__items"> <a class="pages__list__item active" href="#">1</a><a class="pages__list__item" href="#">2</a><a class="pages__list__item" href="#">3</a><a class="pages__list__item" href="#">4</a><a class="pages__list__item" href="#">5</a><a class="pages__list__item" href="#">6</a>...<a class="pages__list__item" href="#">10</a></div><a class="pages__list-button pages__list-button-next" href="#"><span>Следующая</span>
-                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.104597 12.1256L5.1242 7.14525L0.143873 2.12565L1.15172 0.129596L8.12417 7.15704L1.09673 14.1295L0.104597 12.1256Z" fill="#3B7EC2"></path>
-                </svg></a>
             </div>
           </div>
         </section>

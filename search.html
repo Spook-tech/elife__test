@@ -4,13 +4,14 @@
     <title>Заголовок</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230327190419" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;family=Ubuntu:wght@300;400;500;700&amp;display=swap&_v=20230417193624" rel="stylesheet"/>
     <meta charset="UTF-8"/>
     <meta name="format-detection" content="telephone=no"/>
     <link rel="shortcut icon" href="favicon.ico"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230327190419"/>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230327190419"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20230417193624"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css?_v=20230417193624"/>
+    <link rel="stylesheet" href="css/style.min.css?_v=20230417193624"/>
   </head>
   <body> 
     <div class="wrapper">
@@ -20,9 +21,9 @@
             <div class="sale__title">Предложение недели!</div>
             <div class="sale__subtitle">Лови суперскидки прямо сейчас!</div>
           </div>
-          <div class="sale__timer" data-end-date="2023-04-01 00:00">
+          <div class="sale__timer" data-end-date="2023-04-10 00:00">
             <div class="sale__timer-text">До конца акции осталось:  </div>
-            <div class="sale__timer-numbers"> <span class="days"></span><span class="hours"></span><span> : </span><span class="minutes"></span></div>
+            <div class="sale__timer-numbers"> <span class="days"><span class="days-number"> </span><span class="days-text"> дней</span></span><span class="hours"><span class="hours-number"></span><span class="hours-text"> ч.:</span></span><span class="minutes"><span class="minutes-number"></span><span class="minutes-text">мин.</span></span></div>
           </div>
         </div>
       </section>
@@ -63,54 +64,85 @@
         <section class="filters"> 
           <div class="filters__container">
             <form class="filters__form" action="URL">
-              <div class="filters__from filters__item">
+              <div class="filters__from filters__item dropdown">
                 <div class="filters__item-top"> 
                   <div class="filters__item-top__icon"><picture><source srcset="img/icons/flight-black.webp" type="image/webp"><img src="img/icons/flight-black.png" alt=""/></picture></div>
                   <div class="filters__item-top__text">Куда?</div>
                   <div class="filters__item-top__text-gray">Выберите направление</div>
                 </div>
-                <div class="filters__item-drop_down-wrapper">
+                <div class="filters__item-drop_down-wrapper dropdown-block-wrapper">
                   <div class="filters__item-drop_down">
-                    <ul class="filters__from-drop_down">
-                      <li class="filters__from-drop_down-item">
-                        <div class="filters__from-drop_down-item__country">Ирландия</div>
-                        <div class="filters__from-drop_down-item__type">Страна</div>
-                      </li>
-                      <li class="filters__from-drop_down-item">
-                        <div class="filters__from-drop_down-item__country">Евразия</div>
-                        <div class="filters__from-drop_down-item__type">Континент</div>
-                      </li>
-                      <li class="filters__from-drop_down-item">
-                        <div class="filters__from-drop_down-item__country">Ирландия</div>
-                        <div class="filters__from-drop_down-item__type">Страна</div>
-                      </li>
-                      <li class="filters__from-drop_down-item">
-                        <div class="filters__from-drop_down-item__country">Северная Америка</div>
-                        <div class="filters__from-drop_down-item__type">Страна</div>
-                      </li>
-                      <li class="filters__from-drop_down-item">
-                        <div class="filters__from-drop_down-item__country">Рим</div>
-                        <div class="filters__from-drop_down-item__type">Город</div>
-                      </li>
-                      <li class="filters__from-drop_down-item">
-                        <div class="filters__from-drop_down-item__country">Ирландия</div>
-                        <div class="filters__from-drop_down-item__type">Страна</div>
-                      </li>
-                      <li class="filters__from-drop_down-item">
-                        <div class="filters__from-drop_down-item__country">Австралия</div>
-                        <div class="filters__from-drop_down-item__type">Континент</div>
-                      </li>
-                    </ul>
+                    <div class="filters__from-drop_down">
+                      <div class="filters__item-drop_down-title">Куда?</div>
+                      <ul>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Ирландия</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Евразия</div>
+                          <div class="filters__from-drop_down-item__type">Континент</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Ирландия</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Северная Америка</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Рим</div>
+                          <div class="filters__from-drop_down-item__type">Город</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Ирландия</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Австралия</div>
+                          <div class="filters__from-drop_down-item__type">Континент</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Ирландия</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Евразия</div>
+                          <div class="filters__from-drop_down-item__type">Континент</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Ирландия</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Северная Америка</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Рим</div>
+                          <div class="filters__from-drop_down-item__type">Город</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Ирландия</div>
+                          <div class="filters__from-drop_down-item__type">Страна</div>
+                        </li>
+                        <li class="filters__from-drop_down-item">
+                          <div class="filters__from-drop_down-item__country">Австралия</div>
+                          <div class="filters__from-drop_down-item__type">Континент</div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="filters__date filters__item">
+              <div class="filters__date filters__item dropdown">
                 <div class="filters__item-top"> 
                   <div class="filters__item-top__icon"><picture><source srcset="img/icons/calendar.webp" type="image/webp"><img src="img/icons/calendar.png" alt=""/></picture></div>
                   <div class="filters__item-top__text">Когда?<span class="mobile"> 24.06.22-31.06.22 </span></div>
                   <div class="filters__item-top__text-gray">Выберите дату</div>
                 </div>
-                <div class="filters__item-drop_down-wrapper">
+                <div class="filters__item-drop_down-wrapper dropdown-block-wrapper">
                   <div class="filters__item-drop_down">
                     <div class="filters__date-drop_down">
                       <div class="filters__date-drop_down-top">
@@ -135,10 +167,53 @@
                   </div>
                 </div>
               </div>
-              <div class="filters__type filters__item">
+              <div class="filters__type filters__item dropdown">
                 <div class="filters__item-top"> 
                   <div class="filters__item-top__icon"><picture><source srcset="img/icons/palm.webp" type="image/webp"><img src="img/icons/palm.png" alt=""/></picture></div>
                   <div class="filters__item-top__text">Вид тура</div>
+                </div>
+                <div class="filters__item-drop_down-wrapper dropdown-block-wrapper">
+                  <div class="filters__item-drop_down">
+                    <div class="filters__type-drop_down">
+                      <ul class="filters__type-drop_down__list">
+                        <li class="filters__type-drop_down__list-item custom-radio bold">
+                          <label for="all-tours">Все туры</label>
+                          <input class="custom-radio__input" id="all-tours" type="checkbox"/>
+                          <label class="decor" for="all-tours"></label>
+                        </li>
+                        <li class="filters__type-drop_down__list-item custom-radio">
+                          <label for="profitable-offer_register">Организованные туры</label>
+                          <input class="custom-radio__input" id="profitable-offer_register" type="checkbox"/>
+                          <label class="decor" for="profitable-offer_register"></label>
+                        </li>
+                        <li class="filters__type-drop_down__list-item custom-radio">
+                          <label for="flight-hotel-transfer">Перелет-отель-трансфер</label>
+                          <input class="custom-radio__input" id="flight-hotel-transfer" type="checkbox"/>
+                          <label class="decor" for="flight-hotel-transfer"></label>
+                        </li>
+                        <li class="filters__type-drop_down__list-item custom-radio">
+                          <label for="hotels">Отели</label>
+                          <input class="custom-radio__input" id="hotels" type="checkbox"/>
+                          <label class="decor" for="hotels"></label>
+                        </li>
+                        <li class="filters__type-drop_down__list-item custom-radio">
+                          <label for="air-tickets">Авиабилеты</label>
+                          <input class="custom-radio__input" id="air-tickets" type="checkbox"/>
+                          <label class="decor" for="air-tickets"></label>
+                        </li>
+                        <li class="filters__type-drop_down__list-item custom-radio">
+                          <label for="countries">Страны</label>
+                          <input class="custom-radio__input" id="countries" type="checkbox"/>
+                          <label class="decor" for="countries"></label>
+                        </li>
+                        <li class="filters__type-drop_down__list-item custom-radio">
+                          <label for="destinations">Направления</label>
+                          <input class="custom-radio__input" id="destinations" type="checkbox"/>
+                          <label class="decor" for="destinations"></label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="filters__button"> 
@@ -157,27 +232,29 @@
             </ul>
           </div>
         </section>
-        <section class="contacts-line"> 
-          <div class="contacts-line__container">
-            <div class="contacts-line__number">
-              <div class="contacts-line__number-icon"> <picture><source srcset="img/icons/phone.webp" type="image/webp"><img src="img/icons/phone.png" alt=""/></picture></div>
-              <div class="contacts-line__number-text hover__effect-line"><a href="#">077-221-90-20 </a></div>
-            </div>
-            <div class="contacts-line__socials"> 
-              <div class="contacts-line__socials-item"><a href="#"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></a></div>
-              <div class="contacts-line__socials-item"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></div>
-              <div class="contacts-line__socials-item"><a href="#"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></a></div>
-            </div>
-            <div class="contacts-line__time"><span>Вс-Чт: 9:00-18:00 | Пт: до 13:00</span>
-              <div class="contacts-line__time__mobile">
-                <div class="contacts-line__time__mobile-icon"><picture><source srcset="img/icons/calendar2.webp" type="image/webp"><img src="img/icons/calendar2.png" alt=""/></picture>
-                  <div class="contacts-line__time__mobile-text">Вс-Чт: 9:00-18:00 Пт: до 13:00       </div>
+        <section class="contacts-line">
+          <div class="contacts-line-wrapper lock-padding">
+            <div class="contacts-line__container">
+              <div class="contacts-line__number">
+                <div class="contacts-line__number-icon"> <picture><source srcset="img/icons/phone.webp" type="image/webp"><img src="img/icons/phone.png" alt=""/></picture></div>
+                <div class="contacts-line__number-text hover__effect-line"><a href="#">077-221-90-20 </a></div>
+              </div>
+              <div class="contacts-line__socials"> 
+                <div class="contacts-line__socials-item"><a href="#"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></a></div>
+                <div class="contacts-line__socials-item"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></div>
+                <div class="contacts-line__socials-item"><a href="#"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></a></div>
+              </div>
+              <div class="contacts-line__time"><span>Вс-Чт: 9:00-18:00 | Пт: до 13:00</span>
+                <div class="contacts-line__time__mobile">
+                  <div class="contacts-line__time__mobile-icon"><picture><source srcset="img/icons/calendar2.webp" type="image/webp"><img src="img/icons/calendar2.png" alt=""/></picture>
+                    <div class="contacts-line__time__mobile-text">Вс-Чт: 9:00-18:00 Пт: до 13:00       </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <aside class="socials"> 
+        <aside class="socials lock-padding"> 
           <ul class="socials__list"> 
             <li class="socials-facebook"><a href="#"> <picture><source srcset="img/icons/socials/facebook.webp" type="image/webp"><img src="img/icons/socials/facebook.png" alt=""/></picture></a></li>
             <li class="socials-telegram"><a href="#"> <picture><source srcset="img/icons/socials/telegram.webp" type="image/webp"><img src="img/icons/socials/telegram.png" alt=""/></picture></a></li>
@@ -1724,12 +1801,22 @@
                 <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Лечебные и спа туры</a></li>
                 <li class="footer__menu-link"> <a class="hover__effect-line" href="#">Круизы</a></li>
               </ul>
-              <ul class="footer__menu-item"> 
-                <li class="footer__menu-link semi-bold">Связаться с нами:</li>
-                <li class="footer__menu-link">077-221-90-20</li>
-                <li class="footer__menu-link">вс-пт: 9:00-18:00</li>
-                <li class="footer__menu-link">info@elife.tours</li>
-              </ul>
+              <div class="footer__menu-item"> 
+                <ul>
+                  <li class="footer__menu-link semi-bold">Связаться с нами:</li>
+                  <li class="footer__menu-link"> <a class="hover__effect-line" href="tel:0772219020">077-221-90-20</a></li>
+                  <li class="footer__menu-link">вс-пт: 9:00-18:00</li>
+                  <li class="footer__menu-link"> <a class="hover__effect-line" href="mailto:info@elife.tours">info@elife.tours</a></li>
+                </ul>
+                <div class="footer__lang-mobile">
+                  <div class="footer__lang-text semi-bold">Выберите язык:</div>
+                  <ul class="footer__lang__list">
+                    <li class="footer__lang-item active"><a href="#">RU </a></li>
+                    <li class="footer__lang-item"><a href="#">EN </a></li>
+                    <li class="footer__lang-item"> <a href="#">HE </a></li>
+                  </ul>
+                </div>
+              </div>
               <ul class="footer__menu-item"> 
                 <li class="footer__menu-link semi-bold">Наш адрес:</li>
                 <li class="footer__menu-link">Хайфа (Кирьят Моцкин)</li>
@@ -1744,7 +1831,7 @@
                   <li class="footer__socials-item"> <picture><source srcset="img/icons/socials/whatsapp.webp" type="image/webp"><img src="img/icons/socials/whatsapp.png" alt=""/></picture></li>
                 </ul>
               </div>
-              <div class="footer__lang-mobile">
+              <div class="footer__lang-tablet">
                 <div class="footer__lang-text semi-bold">Выберите язык:</div>
                 <ul class="footer__lang__list">
                   <li class="footer__lang-item active"><a href="#">RU </a></li>
@@ -1759,8 +1846,8 @@
                 <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/visa.webp" type="image/webp"><img src="img/icons/payments/visa.png" alt=""/></picture></li>
                 <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/mastercard.webp" type="image/webp"><img src="img/icons/payments/mastercard.png" alt=""/></picture></li>
                 <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/paypal.webp" type="image/webp"><img src="img/icons/payments/paypal.png" alt=""/></picture></li>
-                <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/payment-4.webp" type="image/webp"><img src="img/icons/payments/payment-4.png" alt=""/></picture></li>
                 <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/leumi-card.webp" type="image/webp"><img src="img/icons/payments/leumi-card.png" alt=""/></picture></li>
+                <li class="footer__payments__item"> <picture><source srcset="img/icons/payments/payment-4.webp" type="image/webp"><img src="img/icons/payments/payment-4.png" alt=""/></picture></li>
               </ul>
             </div>
           </div>
@@ -1780,7 +1867,7 @@
           <div class="tour-map__wrapper">
             <div class="tour-map__title mobile">Клуб Марко Поло: Ирландия без свободных дней </div>
             <div class="tour-map__map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14641.106895500392!2d-0.43688371820591515!3d39.51644021939988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6045072b1b8e7b%3A0x4c20431f5ddbaecd!2z0JPQvtC00LXQu9GM0Y8sINCS0LDQu9C10L3RgdC40Y8sINCY0YHQv9Cw0L3QuNGP!5e0!3m2!1sru!2sua!4v1677603845515!5m2!1sru!2sua" width="991" height="898" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <div class="tour__map" id="map" style="height: 500px; width: 500px"></div>
             </div>
             <div class="tour-map__content"> 
               <div class="tour-map__title">Клуб Марко Поло: Ирландия без свободных дней</div>
@@ -1863,13 +1950,75 @@
         </div>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20230327190419"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230327190419"></script>
-    <script src="js/popups.js?_v=20230327190419"></script>
-    <script src="js/swiper.js?_v=20230327190419"></script>
-    <script src="js/spollers.js?_v=20230327190419"></script>
-    <script src="js/datepicker.js?_v=20230327190419"></script>
-    <script src="js/lazyload.js?_v=20230327190419"></script>
-    <script src="js/app.js?_v=20230327190419"></script>
+    <div class="popup" id="application-accepted" aria-hidden="true">
+      <div class="popup__body">
+        <div class="popup__content application-accepted"><span>Спасибо!</span><br/><span>Ваша заявка принята, мы свяжемся с Вами ближайшее время </span></div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js?_v=20230417193624"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20230417193624"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.3/leaflet.js?_v=20230417193624" integrity="sha512-Dqm3h1Y4qiHUjbhxTuBGQsza0Tfppn53SHlu/uj1f+RT+xfShfe7r6czRf5r2NmllO2aKx+tYJgoxboOkn1Scg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/popups.js?_v=20230417193624"></script>
+    <script src="js/swiper.js?_v=20230417193624"></script>
+    <script src="js/spollers.js?_v=20230417193624"></script>
+    <script src="js/photoswipe.js?_v=20230417193624"></script>
+    <script src="js/datepicker.js?_v=20230417193624"></script>
+    <script src="js/lazyload.js?_v=20230417193624" type="module"></script>
+    <script src="js/app.js?_v=20230417193624"></script>
+    <script>
+      // Создаем карту
+      const mymap = L.map('map').setView([45.9028, 10.4964], 5);
+      
+      // Добавляем слой OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+          maxZoom: 18
+      }).addTo(mymap);
+      
+      // Создаем массив с координатами городов
+      let cities = [
+        { name: "Париж", country: "Франция", latlng: [48.8566, 2.3522] },
+        { name: "Берлин", country: "Германия", latlng: [52.5200, 13.4050] },
+        { name: "Амстердам", country: "Нидерланды", latlng: [52.3667, 4.8945] },
+        { name: "Вена", country: "Австрия", latlng: [48.2082, 16.3738] },
+        { name: "Барселона", country: "Испания", latlng: [41.3851, 2.1734] },
+      ];
+      
+      // Создаем массив с маркерами
+      let markers = [];
+      for (let i = 0; i < cities.length; i++) {
+          let marker = L.circleMarker(cities[i].latlng, { color: "#0a7bbd", radius: 5 });
+          markers.push(marker);
+          marker.bindPopup("<b>" + cities[i].name + ", " + cities[i].country + "</b>").addTo(mymap);
+      }
+      
+      // Создаем массив с линиями
+      let lines = [];
+      for (let i = 0; i < cities.length - 1; i++) {
+          let line = L.polyline([cities[i].latlng, cities[i+1].latlng], { color: "#0a7bbd" });
+          lines.push(line);
+          line.addTo(mymap);
+      }
+      
+      // Создаем новый маркер
+      let movingMarker = L.circleMarker(cities[0].latlng, { color: "#0a7bbd", radius: 7, });
+      
+      movingMarker.addTo(mymap);
+      
+      // Используем setInterval для перемещения маркера по линиям
+      let i = 0;
+      let interval = setInterval(function () {
+          // Перемещаем маркер к следующей точке
+          movingMarker.setLatLng(cities[i].latlng);
+          // Увеличиваем значение i на 1
+          i++;
+      
+          // Если мы достигли последней точки, сбрасываем значение i на 0
+          if (i === cities.length) {
+            i = 0;
+          }
+      }, 1000);
+      // Создаем карту
+    </script>
   </body>
 </html>
