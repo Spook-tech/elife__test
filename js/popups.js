@@ -3,17 +3,20 @@ body = document.querySelector("html"),
 lockPadding = document.querySelectorAll(".lock-padding");
 let unlock = !0;
 const timeout = 500;
+const popupCloseIcon = document.querySelectorAll(".close-popup");
+
 if (popupLinks.length > 0) {
    for (let a = 0; a < popupLinks.length; a++) {
       let b = popupLinks[a];
       b.addEventListener("click", function (a) {
+        console.log(b);
          let c = b.getAttribute("href").replace("#", ""),
                 d = document.getElementById(c);
             popupOpen(d), a.preventDefault();
+            console.log(b);
         });
     }
 }
-const popupCloseIcon = document.querySelectorAll(".close-popup");
 if (popupCloseIcon.length > 0)
     for (let index = 0; index < popupCloseIcon.length; index++) {
         let c = popupCloseIcon[index];
